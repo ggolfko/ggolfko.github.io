@@ -66,6 +66,7 @@
       ]
     }
   </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     (function () {
       const saved = localStorage.getItem('color-mode');
@@ -390,7 +391,12 @@
     .social-link svg {
       width: 18px;
       height: 18px;
-      fill: currentColor;
+      stroke-width: 1.9;
+    }
+
+    .top-download svg,
+    .mode-toggle svg {
+      stroke-width: 1.9;
     }
 
     .grid {
@@ -832,12 +838,12 @@
 <body>
   <div class="top-actions">
     <a class="action-link top-download" href="/Kitti-Onthong-Resume.pdf" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.29a1 1 0 1 1 1.4 1.41l-4 3.99a1 1 0 0 1-1.4 0l-4-3.99a1 1 0 1 1 1.4-1.41L11 12.59V4a1 1 0 0 1 1-1zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z" />
-      </svg>
+      <i data-lucide="download" aria-hidden="true"></i>
       <span>View Resume</span>
     </a>
-    <button id="mode-toggle" class="mode-toggle" type="button" aria-label="Switch color mode">🌙</button>
+    <button id="mode-toggle" class="mode-toggle" type="button" aria-label="Switch color mode">
+      <i data-lucide="moon" aria-hidden="true"></i>
+    </button>
   </div>
   <main class="container">
     <section class="hero reveal">
@@ -865,25 +871,17 @@
         <div class="hero-note"><strong>Core positioning:</strong> Senior / Backend / AI Automation / System Architecture</div>
         <div class="social-links" aria-label="Social links">
           <a class="social-link" href="mailto:golf.koz@gmail.com" aria-label="Email" title="Email">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm0 2v.511l9 6.75 9-6.75V7l-9 6.75L3 7zm18 11V9.489l-8.41 6.307a1 1 0 0 1-1.18 0L3 9.489V18h18z" />
-            </svg>
+            <i data-lucide="mail" aria-hidden="true"></i>
           </a>
           <a class="social-link" href="https://th.linkedin.com/in/kitti-onthong-b91990114" target="_blank" rel="noopener"
             aria-label="LinkedIn" title="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6.94 8.5A1.56 1.56 0 1 1 6.93 5.4a1.56 1.56 0 0 1 .01 3.1zM5.5 9.75h2.87V18H5.5V9.75zm4.67 0h2.75v1.13h.04c.38-.73 1.31-1.5 2.7-1.5 2.89 0 3.43 1.9 3.43 4.37V18h-2.86v-3.74c0-.89-.02-2.04-1.24-2.04-1.24 0-1.43.97-1.43 1.98V18H10.17V9.75z" />
-            </svg>
+            <i data-lucide="linkedin" aria-hidden="true"></i>
           </a>
           <a class="social-link" href="https://galaclab.com" target="_blank" rel="noopener" aria-label="Website" title="Website">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm6.93 9h-3.1a15.77 15.77 0 0 0-1.38-5.02A8.03 8.03 0 0 1 18.93 11zM12 4.06c-.83 1.2-1.86 3.54-2.09 6.94h4.18C13.86 7.6 12.83 5.26 12 4.06zM9.91 13c.23 3.4 1.26 5.74 2.09 6.94.83-1.2 1.86-3.54 2.09-6.94H9.91zM5.55 5.98A15.77 15.77 0 0 0 4.17 11h3.1a15.77 15.77 0 0 1 1.38-5.02zM4.17 13a8.03 8.03 0 0 0 4.38 5.02A15.77 15.77 0 0 1 7.17 13h-3zm10.28 5.02A8.03 8.03 0 0 0 18.83 13h-3.1a15.77 15.77 0 0 1-1.28 5.02z" />
-            </svg>
+            <i data-lucide="globe-2" aria-hidden="true"></i>
           </a>
           <a class="social-link" href="https://github.com/ggolfko" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2C6.48 2 2 6.59 2 12.25c0 4.52 2.87 8.35 6.84 9.7.5.1.66-.22.66-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.37-2.22-.26-4.56-1.15-4.56-5.11 0-1.13.39-2.06 1.03-2.79-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.07A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.36 1.9-1.35 2.74-1.07 2.74-1.07.56 1.42.21 2.47.11 2.73.64.73 1.03 1.66 1.03 2.79 0 3.97-2.34 4.84-4.57 5.1.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.17.59.67.49A10.25 10.25 0 0 0 22 12.25C22 6.59 17.52 2 12 2z" />
-            </svg>
+            <i data-lucide="github" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -1177,7 +1175,10 @@
     const isLight = mode === 'light';
 
     document.documentElement.classList.toggle('light', isLight);
-    btn.textContent = isLight ? '☀️' : '🌙';
+    btn.innerHTML = '<i data-lucide="' + (isLight ? 'sun' : 'moon') + '" aria-hidden="true"></i>';
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
     btn.setAttribute('aria-pressed', String(isLight));
     btn.setAttribute('title', isLight ? 'Switch to dark mode' : 'Switch to light mode');
     if (themeColorMeta) {
@@ -1225,6 +1226,9 @@
     const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
     const initialMode = saved || (mediaQuery.matches ? 'light' : 'dark');
     setMode(initialMode, Boolean(saved));
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
     setupReveal();
 
     mediaQuery.addEventListener('change', (event) => {
