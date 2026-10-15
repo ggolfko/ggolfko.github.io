@@ -1,0 +1,21 @@
+name: Portfolio Quality
+on:
+  push: {branches: [master]}
+  pull_request: {branches: [master]}
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: {python-version: "3.13"}
+      - run: python scripts/check-site.py
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: {node-version: "24"}
+      - run: npx --yes @lhci/cli@0.15.x autorun --config=.lighthouserc.json
