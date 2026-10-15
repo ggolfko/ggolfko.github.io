@@ -89,11 +89,8 @@
     }
   ]
 }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </script>  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" /></noscript>
   <script>
     (function () {
       const saved = localStorage.getItem('color-mode');
@@ -128,7 +125,7 @@
       --line: #2a3659;
       --accent: #7cc4ff;
       --accent-2: #8ef0c7;
-      --font-sans: "Inter", "Noto Sans Thai", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Thai", "Leelawadee UI", "Thonburi", Tahoma, Arial, sans-serif;
       color-scheme: dark;
     }
 
@@ -176,8 +173,7 @@
       background: rgba(18, 26, 48, 0.88);
       border: 1px solid var(--line);
       border-radius: 20px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.20);
       transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
@@ -254,7 +250,7 @@
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
       flex: 0 0 auto;
       background: var(--card);
-      animation: avatarFloat 7s ease-in-out infinite;
+      animation: none;
     }
 
     .identity::before {
@@ -266,7 +262,7 @@
       margin-left: -10px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(124, 196, 255, 0.16), transparent 68%);
-      animation: avatarGlow 5.5s ease-in-out infinite;
+      animation: none;
       pointer-events: none;
     }
 
@@ -449,6 +445,8 @@
     .section {
       padding: 32px;
       margin-bottom: 22px;
+      content-visibility: auto;
+      contain-intrinsic-size: 520px;
     }
 
     h2 {
@@ -700,6 +698,8 @@
 
     .footer {
       padding: 20px 24px;
+      content-visibility: auto;
+      contain-intrinsic-size: 90px;
       text-align: center;
       color: var(--muted);
       font-size: 0.9rem;
@@ -917,13 +917,14 @@
     </button>
   </div>
   <main class="container">
-    <section class="hero reveal">
+    <section class="hero">
       <div>
         <div class="eyebrow">Senior Backend Engineer · AI Automation</div>
         <div class="identity">
           <img class="avatar"
             src="/405185169_7753628104654444_8913945958497885861_n.jpg"
-            alt="Portrait of Kitti Onthong" />
+            alt="Portrait of Kitti Onthong"
+            width="168" height="168" fetchpriority="high" decoding="async" />
           <div class="identity-copy">
             <h1 class="name">Kitti Onthong (Galacgolf)</h1>
             <div class="headline">System builder for backend platforms, AI workflows, and production-grade automation</div>
