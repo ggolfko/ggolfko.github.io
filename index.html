@@ -66,7 +66,7 @@
       ]
     }
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <script>
     (function () {
       const saved = localStorage.getItem('color-mode');
@@ -388,15 +388,15 @@
       background: color-mix(in srgb, var(--card) 92%, var(--accent) 8%);
     }
 
-    .social-link svg {
-      width: 18px;
-      height: 18px;
-      stroke-width: 1.9;
+    .social-link i,
+    .top-download i,
+    .mode-toggle i {
+      font-size: 18px;
+      line-height: 1;
     }
 
-    .top-download svg,
-    .mode-toggle svg {
-      stroke-width: 1.9;
+    .top-download i {
+      font-size: 14px;
     }
 
     .grid {
@@ -838,11 +838,11 @@
 <body>
   <div class="top-actions">
     <a class="action-link top-download" href="/Kitti-Onthong-Resume.pdf" target="_blank" rel="noopener">
-      <i data-lucide="download" aria-hidden="true"></i>
+      <i class="fa-solid fa-download" aria-hidden="true"></i>
       <span>View Resume</span>
     </a>
     <button id="mode-toggle" class="mode-toggle" type="button" aria-label="Switch color mode">
-      <i data-lucide="moon" aria-hidden="true"></i>
+      <i class="fa-solid fa-moon" aria-hidden="true"></i>
     </button>
   </div>
   <main class="container">
@@ -871,17 +871,17 @@
         <div class="hero-note"><strong>Core positioning:</strong> Senior / Backend / AI Automation / System Architecture</div>
         <div class="social-links" aria-label="Social links">
           <a class="social-link" href="mailto:golf.koz@gmail.com" aria-label="Email" title="Email">
-            <i data-lucide="mail" aria-hidden="true"></i>
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
           </a>
           <a class="social-link" href="https://th.linkedin.com/in/kitti-onthong-b91990114" target="_blank" rel="noopener"
             aria-label="LinkedIn" title="LinkedIn">
-            <i data-lucide="linkedin" aria-hidden="true"></i>
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
           </a>
           <a class="social-link" href="https://galaclab.com" target="_blank" rel="noopener" aria-label="Website" title="Website">
-            <i data-lucide="globe-2" aria-hidden="true"></i>
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
           </a>
           <a class="social-link" href="https://github.com/ggolfko" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-            <i data-lucide="github" aria-hidden="true"></i>
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -1175,10 +1175,7 @@
     const isLight = mode === 'light';
 
     document.documentElement.classList.toggle('light', isLight);
-    btn.innerHTML = '<i data-lucide="' + (isLight ? 'sun' : 'moon') + '" aria-hidden="true"></i>';
-    if (window.lucide) {
-      window.lucide.createIcons();
-    }
+    btn.innerHTML = '<i class="fa-solid ' + (isLight ? 'fa-sun' : 'fa-moon') + '" aria-hidden="true"></i>';
     btn.setAttribute('aria-pressed', String(isLight));
     btn.setAttribute('title', isLight ? 'Switch to dark mode' : 'Switch to light mode');
     if (themeColorMeta) {
@@ -1226,9 +1223,6 @@
     const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
     const initialMode = saved || (mediaQuery.matches ? 'light' : 'dark');
     setMode(initialMode, Boolean(saved));
-    if (window.lucide) {
-      window.lucide.createIcons();
-    }
     setupReveal();
 
     mediaQuery.addEventListener('change', (event) => {
