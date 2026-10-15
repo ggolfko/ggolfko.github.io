@@ -586,6 +586,26 @@
       margin-bottom: 4px;
     }
 
+    .link-card-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .link-card-title i {
+      width: 18px;
+      text-align: center;
+      color: var(--accent);
+      font-size: 17px;
+      line-height: 1;
+      flex: 0 0 18px;
+    }
+
+    .link-card-title strong {
+      margin-bottom: 0;
+    }
+
     .link-card span {
       color: var(--muted);
       font-size: 0.95rem;
@@ -1008,15 +1028,24 @@
           <h2>Links</h2>
           <div class="link-list">
             <a class="link-card" href="https://github.com/ggolfko" target="_blank" rel="noopener">
-              <strong>GitHub</strong>
+              <div class="link-card-title">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <strong>GitHub</strong>
+              </div>
               <span>Code, experiments, and implementation details across web, backend, and automation work.</span>
             </a>
             <a class="link-card" href="https://th.linkedin.com/in/kitti-onthong-b91990114" target="_blank" rel="noopener">
-              <strong>LinkedIn</strong>
+              <div class="link-card-title">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                <strong>LinkedIn</strong>
+              </div>
               <span>Professional experience, role history, and career profile.</span>
             </a>
             <a class="link-card" href="https://galaclab.com" target="_blank" rel="noopener">
-              <strong>Galaclab</strong>
+              <div class="link-card-title">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <strong>Galaclab</strong>
+              </div>
               <span>Personal site for engineering work, experiments, and product ideas.</span>
             </a>
           </div>
