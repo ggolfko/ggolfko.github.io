@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">Kitti Onthong — Senior Backend Engineer</title><desc id="d">Backend platforms, system architecture and AI automation</desc>
+<rect width="1200" height="630" fill="#f7f8fa"/>
+<rect x="52" y="52" width="1096" height="526" rx="24" fill="#fff" stroke="#dfe3ea"/>
+<rect x="88" y="92" width="82" height="8" rx="4" fill="#0a66c2"/>
+<text x="88" y="220" font-family="Arial,Helvetica,sans-serif" font-size="68" font-weight="700" fill="#182233">Kitti Onthong</text>
+<text x="90" y="280" font-family="Arial,Helvetica,sans-serif" font-size="28" fill="#5a6a8a">Senior Backend Engineer · System Architecture · AI Automation</text>
+<text x="90" y="516" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#7a879f">portfolio.galaclab.com</text>
+<g transform="translate(835 165)" fill="none" stroke-linecap="round">
+ <rect x="0" y="0" width="230" height="230" rx="28" stroke="#dfe3ea" stroke-width="2"/>
+ <rect x="45" y="45" width="140" height="140" rx="22" stroke="#0a66c2" stroke-width="3"/>
+ <path d="M70 118h90M115 73v90" stroke="#0a66c2" stroke-width="3" opacity=".55"/>
+ <circle cx="115" cy="118" r="9" fill="#0b8f68" stroke="none"/>
+</g>
+</svg>

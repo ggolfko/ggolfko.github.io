@@ -17,15 +17,17 @@
   <meta property="og:title" content="Kitti Onthong (Galacgolf) | Senior Backend Engineer" />
   <meta property="og:description" content="Portfolio of Kitti Onthong (Galacgolf), Senior Backend Engineer focused on backend platforms, system architecture, API design, production reliability, and AI automation workflows." />
   <meta property="og:url" content="https://portfolio.galaclab.com/" />
-  <meta property="og:image" content="https://portfolio.galaclab.com/405185169_7753628104654444_8913945958497885861_n.jpg" />
-  <meta property="og:image:alt" content="Kitti Onthong (Galacgolf), Senior Backend Engineer" />
+  <meta property="og:image" content="https://portfolio.galaclab.com/portfolio-cover.svg" />
+  <meta property="og:image:alt" content="Kitti Onthong — Senior Backend Engineer portfolio cover" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Kitti Onthong Portfolio" />
   <meta property="og:locale" content="en_US" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kitti Onthong (Galacgolf) | Senior Backend Engineer" />
   <meta name="twitter:description" content="Portfolio of Kitti Onthong (Galacgolf), Senior Backend Engineer focused on backend platforms, system architecture, API design, production reliability, and AI automation workflows." />
-  <meta name="twitter:image" content="https://portfolio.galaclab.com/405185169_7753628104654444_8913945958497885861_n.jpg" />
-  <meta name="twitter:image:alt" content="Kitti Onthong (Galacgolf), Senior Backend Engineer" />
+  <meta name="twitter:image" content="https://portfolio.galaclab.com/portfolio-cover.svg" />
+  <meta name="twitter:image:alt" content="Kitti Onthong — Senior Backend Engineer portfolio cover" />
   <title>Kitti Onthong (Galacgolf) | Senior Backend Engineer</title>
   <script type="application/ld+json">
     {
@@ -902,6 +904,31 @@
         transform: none !important;
       }
     }
+  
+    /* Minimal modern refinement — 2026-10-16 */
+    :root{--bg:#0d1117;--panel:#121821;--card:#111720;--line:#273140;--accent:#7cc4ff;--accent-2:#8ef0c7}
+    :root.light{--bg:#f7f8fa;--panel:#ffffff;--card:#ffffff;--line:#dfe3ea;--accent:#0a66c2;--accent-2:#0b8f68}
+    body,:root.light body{background:var(--bg)}
+    .container{margin:28px auto 56px}
+    .hero,.section,.footer{background:var(--panel);border-radius:15px;box-shadow:none}
+    :root.light .hero,:root.light .section,:root.light .footer{background:var(--panel);box-shadow:none}
+    .hero{padding:38px;gap:30px}
+    .eyebrow{padding:0;border:0;border-radius:0;background:transparent;letter-spacing:.09em}
+    .identity::before{display:none}
+    .avatar{border-width:1px;box-shadow:none}
+    .action-link,.top-download{border-radius:11px;background:var(--card)}
+    .action-link.primary{background:var(--accent)}
+    .social-link{border-radius:11px;background:var(--card)}
+    .mode-toggle{border-radius:11px;background:var(--panel);box-shadow:none;backdrop-filter:none}
+    :root.light .mode-toggle{box-shadow:none}
+    .meta-card,.metric,.architecture-node,.link-card,.project{background:var(--card);border-radius:12px;box-shadow:none}
+    :root.light .meta-card,:root.light .metric,:root.light .architecture-node,:root.light .link-card,:root.light .project{background:var(--card)}
+    .project:hover,.link-card:hover{transform:translateY(-1px);box-shadow:none;background:var(--card)}
+    :root.light .project:hover{box-shadow:none;background:var(--card)}
+    .tag,:root.light .tag{background:transparent;border-color:var(--line);color:var(--text);box-shadow:none}
+    .tag:hover,:root.light .tag:hover{transform:none;background:transparent;box-shadow:none;border-color:var(--accent)}
+    @media(max-width:820px){.hero,.section{padding:22px}.container{margin-top:18px}}
+
   </style>
 </head>
 
